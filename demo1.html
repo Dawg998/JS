@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="body">
+    
+    <label for="inputcolor"> Select the color:</label>
+
+        <select id="colorselect" onchange="changecolor()">
+
+            <option value="Red">Red</option>
+
+            <option value="Green">Green</option>
+
+            <option value="Blue">Blue</option>
+
+        </select>
+        <br>
+        <br>
+    <div id="display">You have selected </div> 
+
+    <script>
+        function changecolor(){
+
+           let value = document.getElementById("colorselect");
+
+           let display=document.getElementById("display");
+
+           let body=document.getElementById("body");
+
+           let d="The color is"
+
+            if(value.value=='Red'){
+
+                display.innerHTML= `${d} Red`;
+
+                value.style.backgroundColor="red";
+
+                body.style.backgroundColor="red";
+
+            }else if(value.value=="Green"){
+
+                display.innerHTML= `${d} Green`;
+
+                value.style.backgroundColor="green";
+
+                body.style.backgroundColor="green";
+
+            }else if(value.value=="Blue"){
+
+                display.innerHTML= `${d} Blue`;
+
+                value.style.backgroundColor="blue";
+
+                body.style.backgroundColor="blue";
+            }
+        }
+    </script>
+</body>
+</html>
