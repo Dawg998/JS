@@ -1,0 +1,2507 @@
+       //these are statements to interact with the user
+       // alert("hiee");
+       //prompt("Enter the value:")
+       //this is to show print statements in different ways
+        /*
+        console.log("hi");
+        console.log('hi');
+        console.log(`hie`)
+        */
+// ***********************************************************************
+        /*
+        //this is about variables
+        //LET 
+        //declaration
+        let amount=100;
+        // let amount="Hi";//Redeclaration is not possible
+        console.log(amount);
+        //initialization 
+        amount=0;
+        console.log(amount);
+        //re-initialize
+        amount=100;
+        console.log(amount);
+        //re-declare
+        amount="Hi";
+        console.log(amount);
+        */
+// *************************************************************************
+        /*
+        //VAR - most oldest form,still available but have stopped using it since 2015
+        //Declare
+        var amount=20;
+        var amount="Hello";//re-declare
+        console.log(amount);
+        //initialization
+        amount=100;
+        console.log(amount);
+        //reinitialize
+        amount=10000;
+        console.log(amount);
+        //reintialize to different type
+        amount="Hi";
+        console.log(amount);
+        */
+// ******************************************************************* 
+    //CONST - will be using it when we dont have to change the value 
+    //only declaration is not possible
+    // const amount;
+    // console.log(amount);
+    //initialization and declaration @ the sametime is only possible
+    // const amount=1000;
+    // console.log(amount);
+    //reinitialization is not possible
+    // const amount=20000;
+    //redeclaration is not possible
+    // const amount="Hi";
+    /*
+    let amount=1000;
+    console.log("Your bill amount is:\n"+amount);
+
+    var amoun=1000;
+    console.log("Your bill amount is:\n"+amoun);
+
+    const amou=1000;
+    console.log("Your bill amount is:\n"+amou);
+    */ 
+//####################################################################
+//operators
+// a=20;
+// console.log(a**2);//used to find the power
+//== check the value alone
+// let a=10;
+// console.log(a==1);
+
+//=== check both the value and the datatype,returns true only if both are true
+// let b='10';
+// console.log(b==="10");
+
+// let a=10;
+// console.log(a>>1,a<<1);//right shift ,left shift
+
+//to get values from the user
+/*let name=prompt("What is your name:");
+console.log("Hola!!",name);*/
+//dont use this because it will be taking the input as a string so during the mathematical calculations instead of doing arithmetic calculations it will be concatenating
+// let nos=prompt("Enter a number:");
+// console.log(Number(nos)+10);//without typecasting it wont perform arithmetic calcuations
+// ==========================================================================
+//    let one = document.getElementById("one");
+//    one.innerHTML="<i><center>Welcome to JavaScript</center></i>";
+//-----------------------------------------------------------------------------------
+    
+/*document.getElementById("one").innerHTML="<i>Welcome to JavaScript</i>";
+document.getElementById("on").textContent="<i>Welcome to JavaScript</i>";
+document.writeln("<i>Welcome to JavaScript</i>")
+document.write("<i>Welcome to JavaScript</i>")*/
+
+// ----------------------------------------------------------------------------------
+// Math methods
+// document.write("\n"+Math.E)
+// document.writeln(Math.PI);
+// document.write(Math.random)
+// document.writeln(Math.max(10,20,-10,));
+// document.writeln(Math.trunc(0.1234))
+// document.writeln(Math.sign(-10))//returns -1 for -ve and 1 for +ve & 0 for zero
+// document.writeln(Math.abs(-10))
+// document.writeln(Math.ceil(10.01))
+// document.writeln(Math.floor(10));
+// document.writeln(Math.hypot(10))
+// document.writeln(Math.fround(10.123456))
+// ---------------------------------------------------------------------------------
+// String methods
+// let str="hi,this is Js Js";
+// let str1="Welcome to JS";
+// let two=document.getElementsByClassName("two");
+// two[0].innerHTML= str + str1;
+// two[0].innerHTML= str.concat(str1," ",str1);
+// two[0].innerHTML= str.charAt();
+// two[0].innerHTML= str.charCodeAt(" ");
+// two[0].innerHTML= str.endsWith("");
+// two[0].innerHTML= str.includes("i")
+// two[0].innerHTML= str.indexOf(" ")
+// two[0].innerHTML= str.lastIndexOf(" ")
+// two[0].innerHTML= str.match("")
+// two[0].innerHTML= str.matchAll("Hi,this is JavaScript")
+// two[0].innerHTML= str.padEnd(5,"h")
+// two[0].innerHTML= str.padStart(10,"h")
+// two[0].innerHTML= str.padEnd(5,"h")
+// two[0].innerHTML= str.length;
+// two[0].innerHTML= str.split(",")
+// two[0].innerHTML= str.slice(-2)
+// two[0].innerHTML= str.substring(-22);
+// two[0].innerHTML= str.replace("Js","Java Script");//i is for case insensitive
+// two[0].innerHTML= str.replaceAll("Js","Java Script");//2021 introduced
+// two[0].innerHTML= str.match(/Js/g);
+// two[0].innerHTML= str.match("Js");
+// two[0].innerHTML= str.matchAll("Js");//chchk
+// --------------------------------------------------------------------------------------
+// Template literals
+// '' usage
+// const one='hi',two='JS'
+// console.log(`${one} this is ${two}`);
+// const item='5 items';
+// const amt="95";
+// console.log(`you have ${item} in your cart,
+// your bill amount is $${amt}`);
+// --------------------------------------------------------------------------------
+// Arrays // 2 ways
+/*let a=[];//static way
+a.push('a');
+a.push(1);
+a.pop();
+console.log(a);
+console.log(typeof(a));
+console.log(a.length);*/
+
+ /*let b=new Array();//array constructor method
+ b.push(1,2,3);
+ console.log(b);
+ console.log(b[0]);*/
+
+ //value()  it will return iterator so best choice to assign it to a variable and then use nxt() but it will return only values
+/* let a=[11,2,3,4,5,6,6];
+let b=a.values();
+console.log(b.next().value);
+console.log(b.next().value);
+console.log(b.next().value);*/
+
+//keys()returns an iterator so same choice of  values() but it will return only index(keys)
+/*let a=[10,20,30,40,50,60];
+let y=a.keys();
+console.log(y.next().value);
+console.log(y.next().value);*/
+
+// entries() returns an iterator so same choice of above values() but it will return both key and value in pairs        
+/*let a=[10,20,30,40,50,60]; 
+let b=a.entries();
+console.log(b.next().value);
+console.log(b.next().value);
+console.log(b.next().value);
+console.log(b.next().value);*/
+
+
+
+//filter()returns the element itself in array format
+// let a=[10,20,30,40,50,60];
+// console.log(a.filter((val)=>{ 
+//       val=val+10;
+//       return val>40;
+//  }));
+ 
+// let a=[10,20,30,40,50,60];
+// console.log(a.map((val,ind)=>{//returns array but boolean values
+//         val=val+10;
+//         return val>=12;
+//    }));
+
+// let a=[10,20,30,40,50,60,70n];
+// let b=['a','b']
+// let c=[1,2,3]
+// console.log(a.concat(b,c));//returns an array
+// console.log(a.join(b));//return a string
+// console.log(a.includes(70n));//return boolean accept one args,checks NaN too
+// console.log(a.pop());//removes last index value
+// console.log(a);//affect the original array
+// a.push(1,2,3);//adds in last index element
+// console.log(a);//affect the original array
+// a.unshift(120,'a',{a:'b'});//adds first index element
+// console.log(a);//affects original array
+// console.log(a.shift());//removes first index value
+
+// find() returns first value which satisfies the cond
+//  console.log(a.find((val,ind)=>{
+//         console.log(val,ind);
+//       return val+ind>10;       
+//  }));
+
+
+// findIndex() returns first index which satisfies the cond
+// console.log(a.findIndex((val,ind)=>{
+//         return val>=20;
+//         // return  ind+10>=14;     
+//  }));
+
+// let a=[10,20,['a',[12],'b'],[30,40],50,60];
+
+// let b=a.flat();//combines the subarrays and make it into one array
+// console.log(b);
+// console.log(a.flat());//return an array
+// console.log(b.indexOf(30));
+// console.log(a.lastIndexOf());
+// console.log(a.length);//it is the only property
+// console.log(a.reverse(a.reverse()));
+
+//acc-accumalator it will assigned 0 for add and subtract and 1 for multiplication and division
+// console.log(a.reduce((acc,val)=>{ 
+//         acc/=val;
+//         return acc;
+// }));
+
+// let a=[10,20,30,40,50,60];
+// console.log(a.slice(1));//starting index and remove till the end index by default
+// console.log(a);//donot affect original array
+// console.log(a.slice(1,4));//remove from starting index till the (end index-1)
+// console.log(a.splice(1));//affect original array 
+// console.log(a.splice(1,4));//affect original array 
+// console.log(a.splice(1,4,"hi",'bye','hello','how','are','u'));//affect original array
+// console.log(a.copyWithin(0,2,4));//first arg-specifies copied elements place pandra index ,2nd-starting index of the sequence of val,3rd-ending index of the sequence of val //affect original array
+
+//every() returns boolean -true only when all satisifies the condition
+// console.log(a.every((val)=>{ 
+//         val=val+10;
+//         return val>=10;
+// }));
+
+
+// let a=[10,20,30,40,50];
+//for loop
+// for (let index = 0; index < a.length; index++) {
+//         let x = a[index];
+//         console.log(x);       
+// }
+
+//forEach
+// a.forEach((key)=>{ //first arg should always be values and the second is only key
+//         // console.log(value);
+//         console.log(key);
+// })
+
+// split() will convert string into an array
+// let str="sudhagar dhanesh";
+// console.log(typeof str);
+// let x=str.split(" ");
+// console.log(x);
+// console.log(typeof x);
+//  let x=str.split("");
+// console.log(x);
+// console.log(typeof x);
+
+// let y=Array.isArray(x);//checks whether it is pure array or not
+// console.log(y);
+
+
+// let arr=[10,20,30,40];
+// // forin returns index
+// for (const  ind in arr) {
+//         console.log(ind);
+// }
+
+//forof returns value
+// for (const i of arr) {
+//         console.log(i);     
+// }
+
+//to find pure or impure array
+// function demo(){
+//         return arguments
+// }
+
+//  let d=demo(1,2,3,4,5);
+//  let c= Array.from(d);
+//  console.log(c);
+//  console.log(d);
+//  console.log(Array.isArray(d));
+//  console.log(Array.isArray(c));
+
+//  for (const i in a) {
+// const aa=a[i];
+// const c=i
+// console.log(aa);
+// console.log(i);
+// }
+
+// for (let i of a) {
+        
+//         if (i>20) {
+//                 console.log(i);  
+//         }
+// }
+
+// let b=[10,20,30,40,50,60];
+// b.some((val)=>{ // if the val satisfies condition it will,return boolean and
+//         console.log(val>10);
+// })
+
+// let b=[10,20,30,40,50,60];
+// b.every((val)=>{
+//         console.log(val>=10);
+// });
+
+
+
+// let x=b.entries()
+
+// b.forEach(e=> {
+//         console.log(...b);
+//         console.log(e);
+//         console.log(x.next().value);    
+// });
+// console.log(x.next().value);
+// console.log(x.next().value);
+
+// let c=["hi","How","are","you",'a',"b"];
+
+// console.log(c.reverse()); diff is reverse() will return array
+
+// let d=c.reduceRight((acc,val)=>{ //it will return string
+//         return acc+= " "+val
+// });
+// console.log(d);
+
+// let b=['a',"b",`c`,"hello","hiii","b",`c`]
+// console.log(b.sort());//sort in ascending order
+
+
+// console.log(a.sort());//it will arrange in wrong order because it will consider the values as string so it would work perfectly for alpahbets but not for numbers
+
+//Ascending logic 
+// console.log(a.sort((a,b)=>{ 
+//          return a-b;
+// }));
+
+//Descending logic
+// console.log(a.sort((c,d)=>{
+//          return d-c;
+// }));
+
+// Random Elements comparison
+// let arr = [987 , -12, 'abc',"xyza" ,"true"] ;
+// console.log('Before sorting : ',arr)
+// console.log('After sorting : ',arr.sort())
+
+// Random order
+// a.sort(()=>{return 0.4-Math.random()});
+// console.log(a[0]);
+
+//max and min numbers without sorting
+// function Max(){
+        // return Math.max.apply(null,a)};
+
+// function Min(){
+        // return Math.min.apply(null,a)};
+
+// console.log(Min());
+// console.log(Max());
+// console.log(Math.max(...a));//using spread operator
+// console.log(Math.min(...a));//same
+
+// let b=a.sort();
+// console.log(b);
+
+// function Min(){
+//         let a=[1,2,3,4]
+//         return Math.min.apply(a,a)};
+// console.log(Min());
+
+// objects in an array
+//     let c=[{ch:"c",Nos:-1}, 
+//            {ch:"b",Nos:3},
+//            {ch:"a",Nos:-2},
+//            {ch:"d",Nos:2}
+//           ];
+//     console.log(c.length);
+//     console.log(c[0].ch);
+//     console.log(c[1].Nos);
+//     console.log(c[2].ch);
+//     console.log(...c);
+// console.log(...c.sort());
+//    console.log(c.length);
+
+//    ObjDisplay(c);
+
+//    function ObjDisplay(c) {
+//         let d=document.getElementById("on");
+//         d.innerText="Before sorting:\n";
+//         let e=document.getElementById("two");
+//         e.innerText="After Sorting:\n ";
+//         for (let i = 0; i < c.length; i++) {
+//                  d.innerHTML+=`ch:${c[i].ch},    Nos: ${c[i].Nos}<br>`;
+//                 }
+               
+//                 d.innerHTML+='******************\n'
+               
+//                 c.sort((a,b)=>{
+//                         return a.Nos-b.Nos
+//                 });
+
+//         for (let j = 0; j < c.length; j++) {
+//                 e.innerHTML+=`ch:${c[j].ch},    Nos: ${c[j].Nos}<br>`;
+//                }
+//                e.innerHTML+='******************' 
+//         }
+
+// let a=[1,[2,3],4];
+
+// console.log(a.flatMap(e=>{ //returns single array
+//         return [e*2];
+// }));
+
+
+// console.log(a.map(e=>{  // returns multiple arrayssss
+//         return [e*2];
+// }));
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Date and time 
+// console.log(new Date());//default date
+// console.log(new Date("1998-06-20"));//user defined date always in the form of(YY-MM-DD)
+// console.log(new Date().getDate());
+// console.log(new Date().getFullYear());
+// console.log(new Date().getHours());
+// console.log(new Date().getMilliseconds());
+// console.log(new Date().getMinutes());
+// console.log(new Date().getMonth());//return from 0 to 11 where 0 is Januray and 11 is December
+// console.log(new Date().getSeconds());
+// console.log(new Date().getTime());//return milliseconds starting from Jan 1 1970
+// console.log(new Date().getUTCMonth());
+// console.log(new Date().getUTCDate());//coordinated universal Date
+// console.log(new Date().getUTCDay());//it will return integers ranging from 0 to 1 where 0 is Sunday and 1 is Saturday
+// console.log(new Date().getUTCHours());//it will return integers 0 to 24
+// console.log(new Date().getUTCMilliseconds());//return 0 to 999 milliseconds based on ATOMIC CLOCK
+// console.log(new Date().getUTCMinutes());// returns 0 to 59
+// console.log(new Date().getUTCSeconds());//returns 0 to 59
+
+// console.log(new Date().toString());
+// console.log(new Date().toTimeString());
+// console.log(new Date().toDateString());
+// console.log(new Date().toISOString());//ISO 8601
+// console.log(new Date().toUTCString());
+// The zero Time is from Janurary 1 1970
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// syntax for us to get perfect random numbers
+// function Random(max=10,min=0){
+//         return Math.floor(Math.random() * (max-min))+min; //biased towards certain numbers are avoided
+// };
+// console.log(Random());
+// --------------------------------------------------------------------------------------------------
+
+// HTML
+/* <input type="number" placeholder="Enter the age" name="age" id="age">
+  <input type="submit" onclick="vote()">
+  <h1 id="on"></h1>   */
+
+//JS  
+// function vote(){
+//         let age=parseInt(document.getElementById("age").value);
+//         console.log(typeof age);
+//         let x=(age>=21)? "can stand in election":"cannot stand in election"; //ternary Operator
+//         let y=document.getElementById('on');
+//         y.innerText=x;
+// }
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//  console.log(2>12); both are number
+//  console.log('2'>'12');//both are strings but still '2' is bigger than '1' in '12'
+
+//////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// (??)coalescing Operator
+// let name;
+// // let name=null;
+// // name='hi'
+// let text = "missing";
+// let result = name ?? text; //if the 1st argument is not null or undefined it will return the 1st argument else the 2nd argument
+// console.log(result);
+
+////////////////////////////////////////////////////////////////////////////////
+
+// (?.) Optional Chaining Operator
+// obj={no:1,ch:"a",cap:'A'}
+// console.log(obj?.cap);
+// console.log(obj?.name);//instead of throwing an error it will show as undefined in the console
+
+// let x=[1,4,[5,6],2,3];//will not work with
+// let x=[[1,2],[3,4]];//will work
+
+// let x={users:{name:"aa",value:[1,2]}};
+// console.log(x?.users?.value);//works well with nested Arrays
+
+///////////////////////////////////////////////////////////////////////////
+
+// //continue
+// for (let index = 0; index < 10; index++) {
+        
+//         if (index==2) {
+//                 continue;  //it will exclude this alone in the loop
+//          }else if(index==3){
+//                 continue;//it will exclude this alone in the loop
+//         }
+//         console.log(index); 
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// typeof Operator
+/*console.log(typeof "string");
+console.log(typeof "21");
+console.log(typeof 1);
+console.log(typeof [1,2]);
+console.log(typeof {1:"await",2:"ww"});
+console.log(typeof true);
+console.log(typeof false);
+console.log(typeof new Date());
+console.log(typeof new Map());
+console.log(typeof new Set());
+console.log(typeof (()=>{}));
+console.log(typeof function (){});
+console.log(typeof null);
+console.log(typeof undefined);
+console.log(typeof let);
+console.log(typeof 12n);
+console.log(typeof NaN);*/
+
+// console.log(null== undefined);
+// console.log(null===undefined);
+////////////////////////////////////////////////////////////////////////////////////////////
+
+// constructor is a property here 
+/*console.log("string".constructor);
+console.log((21).constructor);*/
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+// isArray() 
+/*console.log(Array.isArray([1,2]));//Array.isArray()is mandatory return true if it is original array and false if it is not
+console.log(Array.isArray([1,2[3,4],5,{1:2}]));
+console.log(Array.isArray(new Array()));*/
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// instance of operator - returns true only if the object is the instance of the considered object
+// arr=[1,1]
+// console.log(arr instanceof Array);
+// console.log(arr instanceof Object);
+// console.log(arr instanceof String);
+// console.log(arr instanceof Number);
+
+// obj={1:'a'}
+// console.log(obj instanceof Array);
+// console.log(obj instanceof Object);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Number()
+
+// let num=Number('10'); // string to number conversion
+// console.log(num);
+// console.log(typeof num);
+
+// let num=Number(""); // empty string to number conversion
+// console.log(num);
+// console.log(typeof num);
+
+// let num = Number(" "); // empty string to number conversion
+// console.log(num);
+// console.log(typeof num);
+
+// let num = Number("999+10"); // 
+// console.log(num);
+// console.log(typeof num);
+
+// let num = Number("99.9");  //decimal be converted to number
+// console.log(num);
+// console.log(typeof num);
+
+// let num = Number("-876") ;   // negative numbers are also accepted by this function 
+// console.log(num);
+// console.log(typeof num);
+
+// let num = Number("aa"); //convert string to Nan
+// console.log(num);
+// console.log(typeof num);
+
+// let num = Number("9abc"); //convert to Nan
+// console.log(num);
+// console.log(typeof num);
+
+// let num = Number("024"); //returns 24
+// console.log(num);
+// console.log(typeof num);
+
+// let num = Number(true); //check for boolean - true it returns Nan
+// console.log(num);
+// console.log(typeof num);
+
+// let num = Number("false"); //check for boolean - false it returns Nan
+// console.log(num);
+// console.log(typeof num);
+
+// let num = Number([]);          //empty array
+// console.log(num);             //0
+// let num = Number([1]);
+// console.log(num);            //1
+// let num = Number([1,2]); 
+// console.log(num);           //NaN
+
+// let num = Number({});
+// console.log(num);           //NaN
+// let num = Number({a:"a"});
+// console.log(num);           //NaN
+// let num = Number(["a"]);
+// console.log(num);           //Nan
+
+// let num = Number(undefined);
+// console.log(num);               //Nan
+// let num = Number(BigInt);
+// console.log(num);                //NaN
+// let num = Number(-Infinity);
+// console.log(num);
+// let num = Number(null);
+// console.log(num);             //0
+
+// const floatValue = parseFloat("12abc"); //12 will be returned & will parse until it encounters a character 
+// console.log(floatValue); 
+
+// const IntValue = parseInt("12.1"); //will return only Integer part of the decimal
+// console.log(IntValue); 
+ 
+// above 3 methods are slower when compared to the Unary operator
+
+// let x="1";
+// let x="a"//will be converted to NaN
+// let y='2';
+// let z= x+y;
+// let zz= +x +y;//x will be converted to Nan and y will be String
+// let zzz= +x + +y; //typeconversion - 
+// console.log(z);
+// console.log(zz);
+// console.log(typeof zz);//string
+// console.log(zzz);
+// console.log(typeof zzz);//Num
+
+//////////////////////////////////////////////////////////////////////////////
+
+// converting numbers to strings
+// let num=1;
+// console.log(typeof num);
+// console.log( typeof String(num));//convert numbers to string
+
+// console.log(typeof String('100'+'23'));
+
+// console.log(String(Date()));//string and tostring does the same
+// console.log(Date().toString());
+// console.log(typeof true);
+// console.log(typeof String(true));
+// console.log(typeof false);
+// console.log(typeof String(false));
+
+// console.log( typeof true);
+// console.log(Number(true));
+// console.log(typeof Number(true));
+// console.log( typeof false);
+// console.log(Number(false));
+// console.log(typeof Number(false));
+
+///////////////////////////////////////////////////////////////////////////////////////
+// Boolean
+
+// console.log(Boolean(""));
+// console.log(Boolean(" "));
+// console.log(Boolean("0"));
+// console.log(Boolean("1"));
+// console.log(Boolean(0));
+// console.log(Boolean(1));
+// console.log(Boolean(-1));//true
+// console.log(Boolean(1.2));
+// console.log(Boolean(2));
+// console.log(Boolean(NaN));//false
+// console.log(Boolean(BigInt));//true
+// console.log(Boolean(-BigInt));//false
+// console.log(Boolean(Infinity));
+// console.log(Boolean(-Infinity));
+// console.log(Boolean([]));
+// console.log(Boolean({}));
+// console.log(Boolean(undefined));
+// console.log(Boolean(function(){}));
+// console.log(Boolean(null));
+
+///////////////////////////////////////////////////////////////////////////////////////
+//only for addition concatenation is done for all other the same operation is done
+// console.log((5).toString()+(6).toString());
+// console.log("5"+5);
+// console.log("5"+"5");
+// console.log("5"-5);
+// console.log(5-"5");
+// console.log("5"-"5");
+// console.log("5"*4);
+// console.log(5* "4");
+// console.log("5"/5);
+// console.log(5/ '5');
+// console.log("*".repeat(8));
+
+//Bitwise Operator
+
+//Bitwise AND operator both should be 1 to return 1
+// console.log(1 & 1);//1
+// console.log(0 & 1);
+// console.log(1 & 0);
+// console.log(0 & 0);
+
+//BITWISE OR operator anyone can be 1 to return 1
+// console.log(1 | 1);
+// console.log(0 | 1);
+// console.log(1 | 0);
+// console.log(0 | 0);
+
+//BITWISE NOT changes 0 to 1 and viceversa
+// console.log( ~ 1);
+// console.log( ~ 0);
+
+//BITWISE XOR operator return 1 if both are different
+// console.log(0 ^ 0);
+// console.log(0 ^ 1);
+// console.log(1 ^ 0);
+// console.log(1 ^ 1);
+
+//BITWISE ZERO FILL LEFT SHIFT
+// console.log(1 << 2);
+// console.log(0 << 1);
+//BITWISE ZERO FILL SIGNED RIGHT SHIFT
+// console.log(1 >> 0);
+// console.log(0 >> 1);
+//BITWISE ZERO FILL RIGHT SHIFT
+// console.log(1 >>> 0);
+// console.log(0 >>> 1);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//yield operator
+// function* numberGenerator() {
+//         yield 1;
+//         yield 2;
+//         yield 3;
+//       }
+      
+//       const generator = numberGenerator();
+
+//       console.log(generator.next());
+//       console.log(generator.next());
+
+      
+//       console.log(generator.next().value); // Outputs: 1
+//       console.log(generator.next().value); // Outputs: 2
+//       console.log(generator.next().value); // Outputs: 3
+//       console.log(generator.next().value); // Outputs: undefined
+      
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
+
+//ERRORS
+
+//CUSTOM ERROR THROWN WITH THE HELP OF THROW KEYWORD AND ERROR()CONSTRUCTOR
+
+// let a;
+// try {  
+//         a=true;
+//                 let input =prompt("Enter the number:");
+                   
+//                 if (input === null) {
+//                    a=false;
+//                   throw "Üser didnot enter the input"; //custom error
+//                 }
+                 
+//                 if (input === " ") {
+//                      a=false;
+//                      throw new Error ("User entered blank space") ;
+//                 }
+
+//                 if(isNaN(input)){
+//                   a=false;   
+//                   throw Error("User entered a NaN,enter a valid number");
+//                 }
+
+//          console.log("The number entered is:"+input);
+
+// } catch (error) {
+//        console.error(`An error occured :`+error.message); //also use error.name
+// } finally{
+//         let final = (a)? "Process is complete": "Process is incomplete";
+//         console.info(final);
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+//TYPES OF ERRRORS
+// try {
+        
+//  Code that might throw errors
+//         const result = someFunctionThatMightThrowAnError();
+//         console.log(result);
+//       } 
+//       catch (syntaxError) {
+//         console.error("Syntax error:", syntaxError.message);
+//       } 
+//         catch (referenceError) {
+//         console.error("Reference error:", referenceError.message);
+//       } 
+// catch (typeError) {
+//         console.error("Type error:", typeError.message);
+//       } 
+// catch (rangeError) {
+//         console.error("Range error:", rangeError.message);
+//       } 
+// catch (uriError) {
+//         console.error("URI error:", uriError.message);
+//       } 
+// catch (evalError) {
+//         console.error("Eval error:", evalError.message);
+//       } 
+// catch (internalError) {
+//         console.error("Internal error:", internalError.message);
+//       } 
+// catch (customError) {
+//         console.error("Custom error:", customError.message);
+//       }
+ 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// automatically becomes global window 
+
+// console.log(c);
+
+// c="KAAR";  //automatically becomes global window object
+// console.log(typeof c);//string
+
+// console.log(c1);
+
+// let c1="KAAR";//global object with the keyword let 
+// console.log(typeof c1);//string
+
+// console.log(c===c1);//why it is returning true 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Hoisting Declarations
+// car;
+// let car; //will be hoisted to the top but still reference error
+
+//Hoisting Initialisations
+// car="car1";
+// let car;  //this is syntax error
+
+// CASE 1
+// let x=1;
+// let y=1;
+// console.log(`x=${x} and y=${y}`);//1 and 1
+
+// CASE 2
+// let x=1;
+// console.log(`x=${x} and y=${y}`);//reference error
+// let y=1;// no hoisting occurs
+
+// CASE 3
+// let x=1;
+// let y=1;
+// console.log(`x=${x} and y=${y}`);//1 and 1
+// y;
+// y=2;//cuz y alone is hoisted not the value
+// y=3;//cuz y alone is hoisted not the value
+
+//CASE 4
+// console.log(`x=${x} and y=${y}`);//reference error
+// let x,y;
+
+//CASE 5
+
+// d();
+// function d(){
+//         let y=1;
+//         console.log(y);
+//         y=2;
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// CASE 1
+// "use strict"//declarations should be correct
+// let y=1
+// console.log(y);
+
+//CASE 2
+// d();//1
+// "use strict"
+// // d();//throw error cuz it is use strict
+// function d(){
+//         y=1;
+//         console.log(y); 
+// }
+
+//CASE 3
+// "use strict"
+// d();//throw error cuz it is use strict
+// function d(){
+//         y=1;
+//         console.log(y); 
+// }
+
+//CASE 4
+// d();//throw error cuz it is use strict
+// function d(){
+//         "use strict"
+//         y=1;
+//         console.log(y); 
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//this keyword
+
+//CASE 1- IN NAMED FUNCTION
+// let obj={
+//         first:"first",
+//         Second:"name",
+//         Third: function join(){         //using named function
+//                 return this.first +" "+this.Second 
+//                    }
+// };
+// console.log(obj.Third());//first name
+
+// //CASE 2- IN IMMEDIATELY INVOKED FUNCTION
+// let obj1={
+//         first:"first",
+//         Second:"name",
+//         Third: function(){            //using immediate invoke function
+//                 return this.first +" "+this.Second 
+//                    }
+// };
+// console.log(obj1.Third());//first name
+
+// //CASE 3- IN ARROW FUNCTION
+// let obj2={
+//         first:"first",
+//         Second:"name",
+//         Third: ()=>{           //using arrow function
+//                 return this.first +" "+this.Second 
+//                    }
+// };
+// console.log(obj2.Third());//undefined undefined
+
+////////////////////////////////////////////////////////////////////////////////
+
+//this keyword assigned to variables
+
+// let x= this;
+// var x=this;
+// const x=this;
+// console.log(x);//relates to the window object
+
+// "use strict" 
+// let x= this;
+// var x=this;
+// const x=this;
+// console.log(x);//relates to the window object again
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//this keyword in Named Function()
+
+//CASE 1 
+// let name="Name";//global scope
+// function demo(){
+//         console.log(name);//Name
+//         console.log(this.name);//white space  cuz not accessible
+//         return this.name
+//                };
+               
+// console.log(demo());//white space  cuz not accessible
+
+//CASE 2
+// function demo(){
+//         let name="Name";//local scope
+//         console.log(name);//Name
+//         console.log(this.name);//white space  cuz not accessible
+//         return name
+//                };
+               
+// console.log(demo());//Name
+
+// CASE 3
+// let name="Name";//global scope
+// function demo(){
+//         let name="Name";//local scope
+//         console.log(name);//Name
+//         console.log(this.name);//white space  cuz not accessible
+//         return name
+//                };
+// console.log(demo());//name
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//this keyword in Immediately in Function()
+
+// let name="HI";
+// let x=function(){
+//         return this.name+" "+name;};
+// console.log(x());
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+//this keyword in Arrow Function()
+// let name="HI";
+// let x=()=>{
+//         return this.name+" "+ name;
+// };
+// console.log(x());//hi
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//this keyword in function 
+//Named function
+// 'use strict'
+// function demo(){
+//         return this
+// };
+// console.log(demo());//window object , undefined when use strict
+
+//Immediatley invoked function
+// 'use strict'
+// let x=function(){return this;};
+// console.log(x());//window object ,undefined when use strict
+
+//Arrow function
+// 'use strict'
+// let x=()=>{
+//         return this;};
+// console.log(x());//window object, "WINDOW OBJ when use strict"
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// this in event handler
+// see index.html
+
+//this in event listener
+// const button = document.querySelector('button');
+// button.addEventListener('click', function () {
+//   console.log(this);
+//   console.log(this.textContent);
+// });
+
+//this in arrow function in event listener 
+// const button = document.querySelector('button');
+// button.addEventListener('click', () => {
+//   console.log(this); // This refers to the global object or enclosing context
+//   console.log(this.textContent);//undefined
+// });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// call() [without argument]-Builtin JavaScript method
+// const fullname={
+//         fullname : function(){//object method
+//                 return this.firstname +" "+this.lastname;
+//         }
+// };
+
+// const person1={//1st obj
+//         firstname:"aa",
+//         lastname:"AA"
+// };
+
+// const person2={//2nd obj
+//         firstname:"bb",
+//         lastname:"BB"
+// };
+
+// console.log(fullname.fullname());//undefined 
+// console.log(fullname.fullname(person1));//undefined 
+// console.log(fullname.fullname.call(person1));//aa AA
+// console.log(fullname.fullname.call(person2));//bb BB
+// console.log(fullname.fullname.call(person1,person1));//aa AA only 1st arg accepted
+// console.log(fullname.fullname.call(person1,person2));//aa AA only 1st arg accepted
+
+// call(arg) [with argument]
+
+// const fulldetail={
+//         fullname : function(City,Country){//object method
+//                 return `Firstname:${this.firstname},<br>Lastname:${this.lastname},<br>City:${City},<br>Country:${Country}.<br>`;
+//         }
+// };
+
+// const person1={//1st obj
+//         firstname:"aa",
+//         lastname:"AA"
+// };
+
+// const person2={//2nd obj
+//         firstname:"bb",
+//         lastname:"BB"
+// };
+
+// document.writeln(fulldetail.fullname.call(person1,"Chennai","India"));
+// document.writeln(fulldetail.fullname.call(person2,["madurai","India"]));
+// document.writeln(fulldetail.fullname.call(person1,{"Chennai","India"}));//apply will accept only args in the form of an array else it will be type error
+// document.writeln(fulldetail.fullname.call(person2,[["madurai"],["India"]]));//nested arrays will also be considered as a single array
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\
+
+//apply() without args
+// const fullname={
+//                 fullname : function(){//object method
+//                         return this.firstname +" "+this.lastname;
+//                 }
+//         };
+        
+//         const person1={//1st obj
+//                 firstname:"aa",
+//                 lastname:"AA"
+//         };
+        
+//         const person2={//2nd obj
+//                 firstname:"bb",
+//                 lastname:"BB"
+//         };
+        
+//         console.log(fullname.fullname());//undefined 
+//         console.log(fullname.fullname(person1));//undefined 
+//         console.log(fullname.fullname.apply(person1));//aa AA
+//         console.log(fullname.fullname.apply(person2));//bb BB
+
+// //just for the difference 
+// console.log(fullname.fullname.call(person1));//aa AA only 1st arg accepted
+// console.log(fullname.fullname.call(person2));// bb BB
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//apply() with args
+// const fulldetail={
+//         firstname:"zz",
+//         lastname:"ZZ",
+//         fullname : function(City,Country){//object method
+//                 return `Firstname:${this.firstname},<br>Lastname:${this.lastname},<br>City:${City},<br>Country:${Country}.<br>`;
+//         }
+// };
+
+// const person1={//1st obj
+//         firstname:"aa",
+//         lastname:"AA"
+// };
+
+// const person2={//2nd obj
+//         firstname:"bb",
+//         lastname:"BB"
+// };
+
+// document.writeln(fulldetail.fullname.apply(person1,["Chennai","India"]));//apply will accept only args in the form of an array else it will be type error
+// document.writeln(fulldetail.fullname.call(person2,["madurai","India"]));//call will accept both arrays and non-arrays but note that when passed as arrays it will consider it as single arg
+
+// document.writeln(fulldetail.fullname.apply(person1,[["Chennai"],"India","a","b"]));//apply will accept only args in the form of an array else it will be type error,also will accept objects but run time error
+// document.writeln(fulldetail.fullname.call(person2,[["madurai"],["India"]]));
+
+
+// console.log(Math.max(1,2,3));
+// console.log(Math.max().apply([1,2,3]));error
+// console.log(Math.max.apply([1,2,3]));//-Infinity
+// console.log(Math.max.apply(null, [1,2,3]));
+// console.log(Math.max.apply(Math, [1,2,3]));
+// console.log(Math.max.apply(" ", [1,2,3]));
+// console.log(Math.max.apply(0, [1,2,3]));
+//it is not working with the nested arrays it is resulting in Nan
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// bind() with no args//it will create new function so we need to invoke it separately
+
+// const fulldetail={
+//         firstname:"zz",
+//         lastname:"ZZ",
+//         fullname : function(){//object method
+//                 return `Firstname:${this.firstname},<br>Lastname:${this.lastname},<br>`;
+//         }
+// };
+
+// const person1={//1st obj
+//         firstname:"aa",
+//         lastname:"AA"
+// };
+
+// const person2={//2nd obj
+//         firstname:"bb",
+//         lastname:"BB"
+// };
+
+// document.writeln(fulldetail.fullname.bind(person1)());//() after is mandatory it is the one which is invoking 
+// console.log(fulldetail.fullname.apply(person1));//does the same thing as above but no invoking of the method needed separately
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//  bind() with args
+
+// const fulldetail1={
+//         firstname:"zz",
+//         lastname:"ZZ",
+//         fullname : function(City,Country){//object method
+//                 return `Firstname:${this.firstname},<br>Lastname:${this.lastname},<br>City:${City},<br>Country:${Country}<br>`;
+//         }
+// };
+
+// const person3={//1st obj
+//         firstname:"aa",
+//         lastname:"AA"
+// };
+
+// const person4={//2nd obj
+//         firstname:"bb",
+//         lastname:"BB"
+// };
+// console.log(fulldetail1.fullname());
+
+
+// setTimeout(function () {//accepts the function alone
+        // let x=document.writeln(fulldetail1.fullname.bind(person3,"chennai","India")());
+//       }, 3000);
+
+// count=0;
+// let x=setInterval(() => {
+//         count++;
+//  document.write("Hi"); 
+//  if (count>=5) {
+//         clearInterval(x);     
+//      }
+// }, 1000);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//closures
+
+// function outer() {
+//         let count=0;
+//    function inner() {
+//         count++;
+//        console.log(count); //gets printed     
+//    }
+//    return inner //undefined 
+// };
+// let x=outer();//closure created
+// console.log(x());//1
+// console.log(x());//1
+// console.log(x());//1
+
+// let add=function outer(){//closure created for outer function
+//         let counter=0;
+//         return function inner(){
+//                 counter++;
+//                 console.log(counter);        
+//         }
+// }()
+// console.log(add());//1
+// console.log(add());//2
+// console.log(add());//3
+// console.log(add());//4
+
+// function createCounter() {
+//         let count = 0;
+      
+//         function increment() {
+//           count++;
+//           console.log(count);
+//         }
+      
+//         return increment;
+//       }
+      
+//       const counter = createCounter(); // Closure is created
+//       console.log(counter());
+//       console.log(counter());
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let x=function(a,b){
+//         return a+b;//anonymous function
+// };
+// console.log(x());//undefined
+// console.log(x(1,2));//3
+
+//function constructor
+// const myFunction = new Function("a", "b", "return a * b");
+// let x = myFunction(4, 3);
+// console.log(x);
+
+//function hoisting
+// console.log(x(5));//this wont give an answer
+
+// let x=function myFunction(y) {
+//   return y * y;
+// }
+
+// console.log(x(5));//this will give an answer
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//selfinvoking anonymous function
+
+// (function () {
+//          let x = "Hello!!";
+//          console.log(x);  // I will invoke myself
+//       })();
+
+//functions as expressions
+// function myFunction(a, b) {
+//         return a * b;
+//       }
+      
+// let x = myFunction(4, 3) * 2;//without *2 it becomes a value
+// console.log(x);
+
+// function name(a,b) {
+//         return arguments.length;//will return how many arguments are given 
+// }
+// console.log(name(11,12,13));
+// console.log(typeof name);
+// console.log(typeof name());
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////      
+  
+//Arrow function without function & return keyword,curly brackets
+// const x = (x, y) => x * y;
+// console.log(x(5,1));
+// console.log(typeof x);//function
+/////////////////////////////////////////////////////////////////////
+//assigning y with default values
+
+// function myFunction(x=[10,20], y = [,10,30]) {//this y is default value
+//         return x + y;
+//       }
+// console.log(myFunction());
+// console.log(myFunction(5));
+// console.log(myFunction(5,1));
+// console.log(myFunction(5,1,1));//cuz function doesnot check the number of argument
+//////////////////////////////////////////////////////////////
+//REST PARAMETER (...)//will be treating the indefinite number into a list of arrays
+// function sum(...args) {
+//         let sum = 0;
+//         for (let arg of args) sum += arg;
+//         return sum;
+//       }
+      
+//       let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+//       console.log(x);
+//////////////////////////////////////////////////////////////////////////////////////
+// finding maximum using rest parameter
+// function Maxi(...para) {
+//         let max=-Infinity;
+//         // for (const i of para) { //for of 
+//         //    if (i > max) {
+//         //    max=i;    
+//         // }
+//         //        }
+//         for (let i = 0; i < arguments.length; i++) { for loop
+//                 if (arguments[i] > max) {
+//                 max=arguments[i];    
+//               }            
+//         }
+//       return max;
+// }
+// console.log(Maxi(1,2,3,30,-1,-10,20));
+// console.log(x);
+
+// function myFunction(a, b) {
+//         return a * b;
+//       }
+// console.log(myFunction(1,2));  
+// console.log(window.myFunction(1,3));
+
+//function constructor invoking
+// const x=new Function('a','b','c',"return a*b*c");
+// console.log(x(1,2,3));
+
+// this in a function constructor:
+// function myFunction(arg1, arg2) {
+//         this.firstName = arg1;
+//         this.lastName  = arg2;
+//       }
+      
+//       // This creates a new object
+//       const myObj = new myFunction("John", "Doe");
+      
+//       // This will return "John"
+//       console.log(myObj.firstName);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Arrow function - works even without brackets, return & function keyword,
+// const a= val=>"Hello"+" "+val;
+// console.log(a("Js"));
+
+// const b= (val)=>"Hello"+" "+val;
+// console.log(a("Js"));
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//classes in JS
+// class first{//using class keyword is a must 
+//           one="HI";//global variable
+//         constructor(one,two,three){//using constructor keyword is also a must,xctd automatically when new object is created for the class
+//                 this.one=one;//local variable
+//              console.log(one,three);   
+//         }
+
+//         // constructor(){//there can only be one active constructor in a class
+//         //         console.log(`constructor`);
+//         // }   
+// }
+// // new first(1);
+// const f= new first(1,2,3);//object creation for the class
+// console.log(f.one);
+
+//classes with constructor and methods
+// class second{
+
+//         constructor(hi,hello){//constructor
+//                 this.hi=hi;
+//                 this.hello=hello;
+//                 // console.log(hi,hello);
+//         }
+
+//         name(first,sec){//method
+//                 this.first=first;
+//                 this.sec=sec;
+//                 // console.log(first,sec);
+//         }\       
+// }
+
+// const x=new second("HOLA","CIAO");//obj creation,passing arg to constructor
+// x.name('john','doe');//passing arg to method
+// // console.log(x.name("aa","bb"));
+// console.log(`This is an working example for constructor ${x.hi} and ${x.hello} and the first name is:${x.first} and the second name is: ${x.sec}`);
+
+//Inheritance one method of a class can be inherited to another class
+// class A {
+         
+//         constructor(a){
+//             this.a=a
+//         }
+
+//         a(){
+//                 return ` A: ${this.a}`;
+//         }
+// }
+
+// class B extends A {
+         
+//         constructor(a,b){
+//                 super(a);
+//          this.b=b; 
+//          this.a=a;
+//         }
+
+//         b(){
+//              return `This is ${a()} and this is B:${this.b}`;
+//         }   
+// }
+
+// // const x =new A();
+// //  x.a("aa");
+// const y = new B("aa","bb");
+// // y.b("bb");
+// console.log(`Single Inheritance Proof:${y.b()}`);
+
+// class A {
+         
+//         constructor(a){
+//             this.aval=a;
+//         }
+
+//         a(){
+//                 return ` A: ${this.aval}`;
+//         }
+// }
+
+// class B extends A {
+         
+//         constructor(a,b){
+//                 super(a);
+//          this.bval=b; 
+//          this.aval=a;
+//         }
+
+//         b(){
+//              return `This is ${this.a()} and this is B:${this.bval}`;
+//         }   
+// }
+
+// const y = new B("aa","bb");
+// console.log(`Single Inheritance Proof:${y.b()}`);
+
+// class car{
+//         constructor(a){
+//           this._carname=a;
+//         }
+
+//         set carname(x){
+//                 this._carname=x;
+//         }
+         
+//         get carname(){
+//              return this._carname;
+//         }
+// 
+
+// const i= new car("a");
+// console.log(i.carname);
+// i.carname="TOYOTA";
+// console.log(i.carname);
+//Hoisting is not possible in class of the javascript
+
+// class car{
+
+//         constructor(x){
+//                 this.x=x;
+//         }
+        
+//         static carname(a){
+//            return `carname is ${a.x}`
+//         }
+       
+// }
+// const c= new car("SKODA");
+// // console.log(c.carname());//error
+// console.log(car.carname(c));
+ //////////////////////////////////////////////////////////////////////////
+
+//objects
+// let x={first:"Tom",
+// sec:"Cat"};
+
+// x.age=20;//adding a property
+
+// x.name = function () {
+//        //adding a method
+//    return (this.first +" "+ this.sec+" "+this.age).toUpperCase();    
+// }  
+// console.log(x.first,x.sec,x.age);
+// console.log(x.name());
+// //values
+// let returnArray=Object.values(x);
+// console.log(returnArray);//returns objects in arrays
+
+// //stringify- functions will not be stringified all others will be.
+// const returnString=JSON.stringify(x);
+// console.log(returnString);//both key and values in the string
+
+// const obj={date:new Date()};
+// let date=JSON.stringify(obj);
+// console.log(date);
+
+// const arr = {
+//         arr:[3,1,"Hi",'a'],
+// };
+// console.log(JSON.stringify(arr));//doesnot stringify the arrays
+
+// let obj = {name:"sudhagar",
+// sec:"venkat",
+// age:25,
+// desig:"full stack",
+// fullname:function(){
+//         return this.name+" "+this.sec;
+// },
+// //accessors - get and set is a keyword it should be used mandatorily
+// get gname(){//method name should not be same as any of the key names
+//         return this.name;
+//    },
+// get gage()  {
+//         return this.age;
+// },
+// get gdesig(){
+//  return this.desig;
+// },
+// get gfullname(){
+//         return this.name+" "+this.sec;
+// },
+// //setters
+// set sdesig(d){
+//         this.desig=d;
+// },
+
+// set sage(a){
+//     return this.age=a;
+// },
+
+// set sname(n){
+//         return this.name=n;
+// }
+
+// };
+// obj.sdesig="FrontEnd FullStack Developer";
+// obj.sage="Twenty-Five";
+// obj.sname="ZUDAWG!!";
+// const a=obj.name
+// const b=obj.age;
+// const c=obj.desig;
+// // console.log(Object.values(obj));
+// // console.log(a,b,c);
+// // console.log(obj.fullname());//diff is function method needs to be invoked
+// // console.log(obj.gfullname);//property method need not be invoked it is treated as a property
+
+// let obj={nos:1};
+
+// Object.defineProperty(obj,"increment",{
+//       get : function(){
+//         return this.nos++;
+//       }
+// });
+
+// Object.defineProperty(obj,"add",{
+//        set : function(input) {
+//         return this.nos+=input;
+//        }
+// })
+// // let x=obj.increment;
+// // console.log(x);//cuz it is postincrement it will print and add
+// // console.log(obj.nos);//it is reflected here
+// // obj.add=5;//set the value
+// // console.log(obj.nos);
+
+// const input=parseInt(prompt("Enter the number:"));
+// obj.add=input;
+// console.log(obj.nos);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//constructor function
+
+// function demo(no,name,age,location){
+//         this.no=no;
+//         this.name=name;
+//         this.age=age;
+//         this.location=location;
+//         this.area="Nanganallur";//setting a default value
+//         this.nos=function(){
+//                 return this.no +" "+this.age;
+//         }
+// }
+
+// const person=new demo(1,"sudhagar",25,"Chennai");
+// console.log(person);
+// console.log(demo.length);
+// console.log(person.nos());//invoking the default function present in the object
+
+// //adding a property from outside
+// person.nationality="Indian";//adding property using the object variable assigned 
+// demo.state="TamilNadu";//wont work, cannot add using object name,we have to add directly in the object
+// person.state="TamilNadu";//this will work
+// demo.prototype.state="TamilNadu";//adding it to the prototype which is the supermost window object it contains all the objects of the javascript
+// delete person.state;//syntax after delete keyword space should be left
+
+//adding a function
+// person.a=()=>{//arrow functions wont work
+//         return this.name+" "+this.age;
+// };
+
+// person.a=function(){                 //it will work fine
+//         return this.name+" "+this.age;
+// }
+// console.log(person.a());
+
+// demo.b=function() {//it will not be added
+//         return this.nationality+" "+this.age;
+// }
+// console.log(person.b());//it will throw error
+
+// demo.prototype.c=function(){//it will be added to the prototype and not the function constructor
+//         return this.location+" "+this.area;
+// }
+// console.log(person.c());//it should be invoked with the object name and not the constructor name still
+
+
+// for(const i in person){//for in returns the key with that we can obtain the value
+//         console.log(i,person[i]);
+// };
+
+// for(const i of person){ //wont work cuz i have declared it in the object constructor 
+//         console.log(i);
+// }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//set in objects
+// let obj={first:"one"};//object creation
+// const s=new Set();//using set constructor creating object
+// const x=[1,2,3,4];//object array
+// s.add(x);//add an elment
+// s.add(obj);
+// s.add(1);
+// s.add(1);//this duplicate will not be added since set will have only unique values
+// s.add("1");
+// console.log(s.add("a"));
+// console.log(s.delete(x));//delete the specified value and returns true if already present and deleted and false if the element itself didnot exist
+// console.log(s.delete(3));//returns false as 3 doesnot exist
+// // console.log(s.clear());//clear will return void and it deletes the entire elements in the set
+
+// console.log(s.entries().next().done);
+// console.log(s.entries().next().value);
+
+// // iterator=s.entries();//will return  a iterator it is in the form of (value,value)
+// // for(let i of iterator){
+// //         console.log(i);
+// // }
+
+// console.log(s.has(2));//returns true if the element exist, will take only one argument
+// console.log(s.keys());//same as the entries and same as the values
+// console.log(s.values());//same as keys
+
+// s.forEach(((val)=>{
+//         console.log(val);
+// }));
+
+// console.log(s);
+// console.log(s.size);//only property in a set
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// let m=new Map();//map creation
+// // (key,value)
+// // m.set(one,"one");//add the elements
+// m.set(1,"one");
+// m.set("one",1);
+// m.set("boolean",'True')
+// m.set("first","one");
+// m.set("two",2);
+// m.set("one",1);//duplicate values will not be added in the map 
+// m.set("arr",[1,2]);
+// m.set("obj",{1:2});
+
+// console.log(m.get("one"));//getting the elements
+// console.log(m.get(1));
+// console.log(m.get("arr"));
+// console.log(m.get("three"));//undefined
+
+// console.log(m.delete("one"));//exist and returns true
+// console.log(m.delete("three"));//not exist so false
+// console.log(m.clear());//deletes the entire map
+
+// console.log(m.has("one"));//searching by key only possible
+// console.log(m.has([1,2]));//cant search by value
+
+// let iterator=m.entries();//return key and value pair
+// for(const iterators of iterator){//always use of if something is return in the form of [key,value]pair or[value,value]pair
+//         console.log(iterators);
+// }
+// let keysiterator=m.keys();//return keys 
+// for(const key of keysiterator){//always use of if something is return in the form of [key,value]pair or[value,value]pair
+//         console.log(key);
+// }
+
+// let valueiterator=m.values();
+// for(const values of valueiterator){//
+//         console.log(values);
+// }
+
+// m.forEach((val,key)=>{ //in foreach always value is always the first arg and the key is always the second arg
+//         console.log(key,val);
+// });
+
+// console.log([...m].length);
+// console.log(m.size);
+// console.log(m);
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// Object References
+//create method
+// let obj=Object.create({});
+// console.log(obj);
+
+// let parentobj={name:"aa"};
+// let childobj=Object.create(parentobj);//create a copy of the original object
+
+// console.log(parentobj);
+// console.log(childobj);
+// console.log(childobj.name);
+
+// Object.defineProperty(parentobj,"Age",{value:25});//we can have only one property
+// console.log(parentobj.Age);
+
+// Object.defineProperty(parentobj,{ //it is not possible 
+//         //because syntax is (objectName,propertyName,descriptor always to be passed as an object)
+//         nationality:{
+//         value:"Indian"
+//          }
+// });
+// console.log(parentobj.nationality);
+
+// Object.defineProperties(parentobj,{//used to define multiple properties and it should be passed only as objects,Also it should contain multiple properties else it will throw error
+//         location:{         //syntax: (objectName,descriptors always in objects)
+//                 value:"chennai",
+//                 writable:true,
+//                 enumerable:true},
+//         area:{
+//                 value:"chennai",
+//                 writable:true}});
+
+// console.log(parentobj.location);
+// console.log(parentobj.area);
+
+//getOwnPropertyNames(ObjectName) returns Properties Names alone in the Array 
+// let propertiesArray= Object.getOwnPropertyNames(parentobj);
+// console.log(propertiesArray);
+
+//Descriptors - syntax getOwnPropertyDescriptors(ObjectName) returns list of objects
+// let descriptorobject=Object.getOwnPropertyDescriptors(parentobj);
+// console.log(descriptorobject);
+// console.log(descriptorobject.Age);
+// console.log(descriptorobject.area);
+
+// Descriptor - syntax getOwnPropertyDescriptor(bjectname,propertyName)
+// console.log(Object.getOwnPropertyDescriptor(parentobj,"Age"));
+
+// console.log(Object.getOwnPropertySymbols(parentobj));
+
+// const symbol1 = Symbol("symbol1");
+// const symbol2 = Symbol("symbol2");
+
+// const obj = {
+//     [symbol1]: "Value for symbol1",
+//     [symbol2]: "Value for symbol2"
+// };
+
+// const symbols = Object.getOwnPropertySymbols(obj);
+
+// symbols.forEach(symbol => {
+//     console.log(symbol, obj[symbol]);
+// });
+
+// Output:
+// Symbol(symbol1) Value for symbol1
+// Symbol(symbol2) Value for symbol2
+
+// console.log(Object.getPrototypeOf(parentobj));//returns in the form of objects the available prototype objects for the passed constructor
+
+//a property which is defined directly in the object then it has all the 3 meta property (ennumerable,writable,configurable) are assigned the true value
+// console.log(Object.keys(parentobj));//returns arrays only the property which have the ennumerable value as true
+// console.log(Object.getOwnPropertyDescriptor(parentobj,"name"));
+
+
+//TO PREVENT OBJECTS
+// Object.preventExtensions(parentobj);
+// Object.defineProperty(parentobj,"fatherName",{value:"bb"});//error bcz it is not extensible
+// console.log(parentobj);
+
+//to check extensible or not ,False if new property cannot be added else true
+// let extend=Object.isExtensible(parentobj);
+// console.log(extend);
+
+//check if the values are the same, it will return true else it will return false
+// let is=Object.is(parentobj.location,parentobj.area);
+// console.log(is);
+
+
+// The Object.seal() method prevents adding or removing properties but allows modifying existing properties.
+
+// console.log(parentobj.Age);//25
+//Seal - only modifying is allowed,deleting and adding properties is not allowed
+// Object.seal(parentobj);
+// console.log(Object.isSealed(parentobj));
+// console.log(Object.isExtensible(parentobj));
+// delete parentobj.Age;//deletion is not possible
+// console.log(parentobj.Age);//25
+
+// Object.defineProperty(parentobj,"birth",{//will not add this property to the object
+//         value:"90s",
+// })
+// console.log(parentobj);
+
+// parentobj.name="Sudhagar";//modification is possible
+// console.log(parentobj.name);
+
+//cannot add,remove or even modify the considered object
+// Object.freeze(parentobj);
+// console.log(Object.isFrozen(parentobj));
+// console.log(Object.isExtensible(parentobj));//so cannot add
+// delete parentobj.name
+// console.log(parentobj.name);//so deletion is also not possible
+// parentobj.name="<NAME>"; 
+// console.log(parentobj.name);//so modification is also not possible
+
+
+//always give the json object as the string
+// let jsonStr=`{
+//          "name":"John",
+//          "age":34,
+//           "Male":true,
+//          "luckynos":[1,2],
+//          "color":{"Pigmentation":"brown"},
+//          "Married":null
+//         }`
+// let jsobj=JSON.parse(jsonStr);//converts json object to js object
+// console.log(jsobj);//it is the JavaScript object
+// console.log(jsobj.Married);
+// console.log(jsobj.name);
+// console.log(jsobj.age);
+
+// let jsonArray=`[1,"one","hi","hello","two"]`;
+// let jsArray=JSON.parse(jsonArray);
+// console.log(jsArray);
+// console.log(jsArray[0]);
+
+
+//Date objects are not allowed in JSON,If you need to include a date, write it as a string,and then use the Date()
+// const text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+// let obj = JSON.parse(text) ;
+// console.log(obj.birth);
+// let birth=new Date(obj.birth);
+// console.log(birth);
+
+// //Function are not parsed so they should be given as string and then make use of the eval function
+// const text = '{"name":"John", "age":"function () {return 30;}", "city":"New York"}';
+// const jsobj = JSON.parse(text);
+// // console.log(obj.age());
+// let ageFunctionstring=jsobj.age;
+// let ageFunction=new Function('return ' + ageFunctionstring)();
+// let result=ageFunction();
+// console.log(result);
+
+ //JSON.STRINGIFY()
+// const obj={name:'aa',age:25};
+// const arr=[1,2,3];
+// const jso=JSON.stringify(obj);
+// const jso1=JSON.stringify(arr);
+// console.log(typeof jso,typeof jso1);//String,String
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//callBack function
+// function callBack(s){
+//         console.log(s);
+// }
+
+// function sum(n1,n2,mycallbk){
+//        sum=n1+n2;
+//        mycallbk(sum);
+// }
+
+// sum(1,2,callBack);
+
+// Define a callback function
+function onComplete() {
+        console.log("Task is complete!");
+      }
+      
+//       // Function that takes a callback
+//       function doTask(taskName, callback) {
+//         console.log(`Processing "${taskName}"...`);
+        
+//         // Simulate a time-consuming task (e.g., fetching data from a server)
+//         setTimeout(function() {
+//           console.log(`"${taskName}" is done.`);
+          
+//           // Call the callback to signal completion
+//           callback();
+//         }, 2000); // Simulating a 2-second task
+//       }
+      
+//       // Call the doTask function with the onComplete callback
+//       doTask("Data Fetch", onComplete);
+      
+// function otp(){
+//         console.log(Math.floor(Math.random()*10000));
+//         end();
+// }
+
+// function end(){
+//         console.log('End!!!');
+// }
+
+// function start(s,callback1){
+//         console.log(s);
+        
+//         setTimeout(function(){
+//                 console.log("Generating OTP");
+//                 callback1();
+//         },3000);
+// }
+// start("Welcome",otp);//no need of invoking and passing 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// async
+
+// setTimeout(myfunc, 3000); //type 1
+// function myfunc(){
+//         console.log("Hello World");
+// }
+
+// setTimeout(function myfunc(){   //passing whole function directly as the argument
+//         console.log("Hello World,Again!!!");
+// },5000);
+
+// setInterval(function(){let d= new Date();
+// console.log(`${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}:${d.getMilliseconds()}`);},1000)
+
+
+// function show(show){//callback 
+//         console.log(show);
+//     }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//PROMISE       
+
+// let mypromise= new Promise((resolve,reject)=>{
+//         let x=0;
+//         if(x==0){resolve ("Heythere,how are ya?!!")}
+//         else{ reject("Sorry,the number is not 0")}
+// });
+
+//we can add multiple promises too
+// then()--->2 argument one is success and the other is failure object also both are optional too
+// It is also logical to give only one argument 
+//Both should be handled separately
+// mypromise.then((resolve)=>{console.log(resolve);},//works fine with arrow function
+// (reject)=>{console.log(reject);});
+
+// mypromise.then(resolve,reject);//passed only as variable wont work properly as desired
+
+// mypromise.then(function(resolve){//works fine for implicitly invoked function 
+//         console.log(resolve);
+// },function(reject){
+//         console.log(reject);
+// });
+
+// mypromise.then((resolve)=>{console.log(resolve);})
+
+// mypromise.then((resolve,reject)=>{ //error will be throwing as the error itself 
+//         console.log(resolve);
+//         if(reject != undefined)
+//         console.log(reject);
+// })
+
+// mypromise.then(function(resolve,reject){
+//         console.log(resolve);
+//         console.log(reject);
+// });
+
+// mypromise.then((reject)=>{console.log(reject)},(resolve)=>{console.log(resolve)});
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Async and await 
+//Async - will return the promise 
+// Await - will wait for the promise.it can be used only inside async functions
+
+// let demo= async ()=>{
+//         let x=0;
+//         if(x==0){return "Success"}
+//         else {throw "Failure"};      
+// };
+
+// let Result=async ()=>{let value= await demo();
+//         console.log(value);};
+// Result();   
+
+//await should be used only in the async prefixed functions
+// async function mytest(){
+
+// let mypromise = new Promise((resolve)=>{
+//         setTimeout(()=>{resolve ("Yes,Multiple by 2");},4000);//a callback fn
+// });
+
+// document.getElementById("async").innerHTML= await mypromise;
+
+// };
+// mytest();
+
+//DOM METHODS
+// const js=document.getElementById("id");//returns single elements
+// console.log(js);
+// const n =document.getElementById("id").innerHTML="Hi,Hello this is Javascript";
+// for(let i=0;i<n.length;i++){console.log(n[i]);};
+// document.getElementById("id").innerText="hola!!";
+
+// const tag=document.getElementsByTagName("p").innerHTML="JavaScript";//returns Array
+// console.log(tag);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// const check=document.getElementById("main");//returns directly the element 
+// console.log(check);
+
+// const check1=document.getElementsByTagName("p");//returns the Collections Arrays
+// console.log(check1);
+
+// const check3=document.getElementsByClassName("one");//returns the Collections Arrays
+// console.log(check3);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const bc=document.getElementsByTagName("body")[0];//there is only one element in the array,so fetching it 
+// console.log(bc);
+// const zc=bc.getElementsByTagName("p");
+// console.log(zc[1]);
+// console.log(zc);
+
+
+// const d=document.getElementsByClassName("one","two").innerHTML="Javascript";
+// console.log(d);
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// document.forms
+// const f=document.forms//returning collections
+// console.log(f.length);
+// for(let i=0;i<f.length;i++){
+//         console.log(f.elements);
+// }
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//document.anchors
+// const a=document.anchors;//returning collections
+// console.log(a[0].innerHTML);
+// console.log(a[1].innerHTML);
+// console.log(a[2].innerHTML);
+// console.log(a.length);
+//////////////////////////////////////////////////////////////////////////////////////
+// console.log(document.body.innerHTML);//whole body alone
+/////////////////////////////////////////////////////////////////////////////////
+// console.log(document.documentElement);//from the root element
+/////////////////////////////////////////////////////////////////////////////////////////
+// console.log(document.title);//returns the innerHtml content
+// console.log(document.scripts);//returns the Html collection
+// console.log(document.links);//returns the Html collection
+// console.log(document.head);//returns the head section
+///////////////////////////////////////////////////////////////////////////////////////////////
+// document.write(Date());//dynamic html
+// document.getElementById("i1").src="https://cdn.pixabay.com/photo/2023/07/10/18/59/bird-8118926_1280.jpg";//changing the attribute
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//FORM VALIDATION --- a example
+
+// function validate(){
+//         let x=document.forms.demoform1.f.value;
+//         if(x =="") alert("Mandatory to fill the firstName");
+// }
+
+// function myFunction() {
+//         // Get the value of the input field with id="numb"
+//         let x = document.getElementById("numb").value;
+//         // If x is Not a Number or less than one or greater than 10
+//         if (isNaN(x) || x < 1 || x > 10) {
+//           alert("Enter a valid Number");
+//         } else {
+//           document.write("Valid number");
+//         }
+//       }
+//////////////////////////////////////////////////////////
+//css(document.getElementbyId().style.property)
+// document.getElementById("p").style.color="red";
+
+// document.getElementsByTagName("p")[0].onclick=demo;
+/////////////////////////////////////////////////////////////////
+// onclick()
+// let x=document.getElementsByTagName("p");
+// x[0].onclick=demo;
+// function demo(){
+//         this.innerHTML="Hi,this is JS!!!"
+// }
+/////////////////////////////////////////////////////////////////////
+// onchange()
+// let x=document.getElementsByTagName("input")[0].onchange=demo;//when leaving the webpage it will automatically change it
+// function demo(){
+//         this.value="left";
+// }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// happy Face and sad Face
+// onmouseup() and onmousedown()
+// function md(){
+//         let x=document.getElementsByName("img");//returns a nodelist so access it first 
+//         x[0].src="https://imgs.search.brave.com/v0nxXTfVhbbw0B4G3XXU6el-rbnt4Ta8m8On93T0WQo/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzk1LzI2LzQ2/LzM2MF9GXzI5NTI2/NDY3NV9jbHdLWnhv/Z0FoeExTOXNEMTYz/VGdrejFXTUhzcTFS/Si5qcGc"
+// }
+
+// function mp(){
+//         let x=document.getElementsByName("img");
+//         x[0].src="https://imgs.search.brave.com/VAHlBKDSL4XDA7EI-uTBJtHQJqpvJU1uvm8cauu7Q0I/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAxLzcwLzg3LzE0/LzM2MF9GXzE3MDg3/MTQ3N19JYkdYWEd3/VzRSUVN3RExHVkJZ/dzJ2ZXRFWkcxaWFF/ci5qcGc"
+// }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Eventlisteners()
+// document.getElementById("el").addEventListener("mouseover",function (){
+//     this.style.color="red";
+// });
+// document.getElementById("el").addEventListener("mouseleave",function (){
+//         this.style.color="black";
+// });
+
+// document.getElementById("el").addEventListener("click",first)
+// document.getElementById("el").addEventListener("click",second)
+
+
+// function first() {
+//         alert("First Alert");
+// };
+
+// function second() {
+//         alert("Second Alert");
+// };
+
+// document.getElementById("el").addEventListener("click",function (){
+//         if(this.innerHTML=="Event listener"){
+//         this.innerHTML="Clicked";
+//         } else{
+//                 this.innerHTML="Event Listener" ;}
+        
+// });
+
+// window.addEventListener("resize",function(){
+//        alert("resize the window");
+// });
+
+// window.addEventListener("resize", ()=>{ //can add event listeners to window objects too
+//         alert("resize the window");
+//     });
+
+///performing calculations using this
+// let a=5;
+// let b=5;
+
+// document.getElementById("result").addEventListener("click",function (){
+//         this.innerHTML=a*b;
+// });
+
+// document.getElementById("btn").addEventListener("click",a);
+
+// function a(){
+//         document.getElementById("remove").style.display="none";
+
+// }
+// document.getElementById("btn1").addEventListener("click",()=>{ //remove should be given inside the addevent listener
+//         document.getElementById("btn").removeEventListener("click",a);
+// });
+//createElement()
+// let parent=document.createElement("div");
+// parent.textContent="This is first Div"
+// console.log(parent);
+// console.log(parent.textContent);
+// console.log(parent.innerHTML);
+
+// let child=document.createElement("p");
+// child.textContent="This is a child paragraph"
+// console.log(child);
+// console.log(child.textContent);
+// console.log(child.innerHTML);
+
+// let child1=document.createElement("p");
+// child1.textContent="This is a child1 paragraph"
+// console.log(child1);
+// console.log(child1.textContent);
+// console.log(child1.innerHTML);
+
+// document.body.appendChild(parent);//if this is absent it is not added to the page's DOM
+
+// // append() and appendChild() difference is that append can accept n no of arguments but appendChild will accept only one argument
+
+// // parent.appendChild(child1);//will add as last child same as that of the push in arrays
+// parent.append(child,child1);//will add as last child same as that of the push in arrays
+
+// parent.setAttribute("id","parentDiv");//(Name of the attribute,Value)
+// console.log(parent.getAttribute("id"));//(Name of the attribute)
+
+// parent.setAttribute("class","parentdiv");//(Name of the attribute,Value)
+// console.log(parent.getAttribute("class"));
+
+// console.log(document.getElementById("parentDiv"));
+// let cls=document.getElementsByClassName('parentdiv'); 
+// console.log(cls);
+// console.log(cls[0]);
+// console.log(cls.length);
+
+
+// let qsel=document.querySelector("p");//will return only the first element which matches the query
+// console.log(qsel);//return the element itself directly
+
+// let nodelist=document.querySelectorAll("p");//will return all the elements which is matching the query
+// console.log(nodelist);//returns a nodelist which will be in the form of an array like structutre
+// console.log(nodelist[0],nodelist[1]);
+
+
+
+// // use Array.from() sprad operator to convert it into an array, cuz to access nodelist element we dont have any methods
+// let jsarr=Array.from(nodelist);
+// console.log(jsarr);
+
+// let jsspread=[...nodelist];
+// console.log(jsspread);
+
+// console.log(Array.isArray(jsarr));//true
+// console.log(Array.isArray(jsspread));//true
+// console.log(Array.isArray(nodelist));//false
+
+// let Nodelist=document.getElementsByTagName("div");
+// console.log(Nodelist);
+// console.log(Nodelist[0]);
+
+// parent.setAttribute("name","Parentdiv");
+// console.log(parent.getAttribute("name"));
+
+// // parent.removeChild(child);
+// // parent.removeChild(child1);
+// // console.log(parent);
+
+// let newchild=document.createElement("p");
+// newchild.textContent="Hi, this is new Child";
+
+// parent.appendChild(newchild);
+// parent.replaceChild(newchild,child1);//always(new Node,node to be replaced with)
+// console.log(parent);
+  
+// //NODE NAVIGATIONS
+// let childn=document.querySelector("p");
+// let parentnode=childn.parentNode;//the child element's parentNode will be selected
+// console.log(parentnode.id);
+// console.log(parentnode);
+
+// console.log(parent.childNodes);//will be returning a node
+// console.log(Array.from(parent.childNodes)[0]);
+
+// console.log(parent.firstChild);//to access the firstchild Node
+// console.log(parent.lastChild);//to access the lastchild Node
+// console.log(parent.children);//returns collection,it will neglect the text of the parent and the child 
+// console.log(parent.firstElementChild);//wont return in nodelist
+// console.log(parent.lastElementChild);//wont return in nodelist
+
+// let ul=document.querySelector("li");
+// console.log(ul.nextSibling);//returns next sibling node
+// console.log(ul.previousSibling);//returns previous sibling node
+// console.log(ul.nextElementSibling);//returns next sibling element alone
+// console.log(ul.previousElementSibling);//returns previous  element alone
+
+//NODE
+// let div=document.createElement("div");
+// let text=document.createTextNode("Node value");//createTextNode()
+// div.appendChild(text);//have to append it
+
+// console.log(div.textContent);
+
+// let h1=document.createElement('h1');
+// h1.textContent="n2"
+
+// h1.setAttribute("id","header2");
+// div.appendChild(h1);
+
+// //nodeValue
+// console.log(h1.nodeValue);//Element nodevalue is NULL
+// console.log(h1.firstChild.nodeValue);//works like textcontent or innerHTML,textcontent nodevalue is text itself
+// let attribute= h1.getAttributeNode("id");
+// console.log(attribute.nodeValue);//attribute nodevalue is the value of attribute
+
+// //nodeType
+// console.log(h1.nodeType);//return number accordingly,1-element node  2=attribute node 3=textnode
+// console.log(h1.firstChild.nodeType);//tells whether it is element or attribute or document or comment node by returning a NUmber
+// let attribute1= h1.getAttributeNode("id");
+// console.log(attribute.nodeType);//attributenode = 2
+
+// //nodeName
+// console.log(h1.nodeName);//element tagname in uppercase
+// console.log(h1.firstChild.nodeName);//#text
+// let attributez= h1.getAttributeNode("id");
+// console.log(attributez.nodeType);
+// console.log(h1.nodeName);//element is uppercase
+
+
+// let h2=document.createElement("h2");
+// h2.textContent="This is H2";
+
+// //insertBefore() ...will add the element before the previous element 
+// div.insertBefore(h2,h1);//parentElement.iB(new,old);
+// console.log(div);
+
+//COLLECTIONS it is not an Array but it is ArrayLike structure 
+// let ul=document.getElementsByTagName("ul");
+// console.log(ul);
+// console.log(ul.length);//collection length
+// console.log(ul[0]);//access thru index number
+// console.log(ul.item(0));//collection element access thru item()
+// console.log(ul.namedItem("ul"));
+
+// let UL=Array.from(ul);
+// console.log(Array.isArray(UL));//TRUE
+// console.log(UL[0]);
+
+//BROWSER OBJECT MODEL(BOM)
+// //properties of BOM
+// console.log(window.innerHeight);//browser's viewport height alone
+// console.log(window.innerWidth);//browser's viewport width alone
+
+// //screen objects
+// console.log(screen.height);//entire display screen height
+// console.log(screen.width);//entire display screen width
+// console.log(screen.orientation.type);
+// console.log(screen.colorDepth);
+// console.log(screen.availHeight);//available space to show the content
+// console.log(screen.availWidth);//available space to show the content
+// console.log(screen.pixelDepth);
+
+// //Location objects
+// console.log(location);
+// console.log(location.hostname);
+// console.log(location.pathname);
+// console.log(location.href);
+// ...etc
+
+// console.log(location.port);
+
+//history objects
+
+//navigator Objects - all are useless
+// console.log(navigator.cookieEnabled);//if cookies are on it will return true else it will return false
+// console.log(navigator.appCodeName);
+// console.log(navigator.platform);
+// console.log(navigator.product)
+// console.log(navigator.appVersion);
+// console.log(navigator.language);
+// console.log(navigator.onLine);
+// console.log(navigator.javaEnabled());
+// navigator.geolocation.getCurrentPosition(showPosition);
+// function showPosition(position) {
+//         console.log("Latitude: " + position.coords.latitude);
+//         console.log("Longitude: " + position.coords.longitude);
+        
+        // You can access other properties of the position object as needed.
+//       }
+      
+
+//alertBox - has only ok button
+//promptBox - has input value entering function,a OK and a CANCEL button
+//confirmBox - has a ok and a cancel 
+// function myFunction() {
+
+//         if (confirm("Press a button!")) {
+//           console.log("You pressed OK!");
+//         } else {
+//           console.log("You pressed Cancel!");
+//         }
+//       }
+
+// setTimeout(myTimeout1, 2000) 
+// setTimeout(myTimeout2, 4000) 
+// setTimeout(myTimeout3, 6000) 
+
+// function myTimeout1() {
+//   document.getElementById("demo").innerHTML = "2 seconds";
+// }
+// function myTimeout2() {
+//   document.getElementById("demo").innerHTML = "4 seconds";
+// }
+// function myTimeout3() {
+//   document.getElementById("demo").innerHTML = "6 seconds";
+// }
+
+
+//LOCAL STORAGE - can be accessed in Application in the browser
+//It has no expiration date.
+
+let ls=window.localStorage.setItem("Name","Sudhagar");//(key,value)
+let ls1=window.localStorage.setItem("Age","25");
+console.log(`ls=${ls}`);//undefined
+console.log(`${ls} ${ls1}`)//undefined
+console.log(window.localStorage.getItem("Name"));//Sudhagar
+console.log(window.localStorage.getItem("Age"));//25
+console.log(window.localStorage.getItem("Occupation"));//null
+
+window.localStorage.removeItem("Age");//(key) removes that particular item alone
+
+console.log(window.localStorage.key(0));
+console.log(window.localStorage.key(1));//null
+console.log(window.localStorage.length);
+
+// window.localStorage.clear();//clear the data
+// console.log(window.localStorage.key(0));//null
+// console.log(window.localStorage.length);//null
+
+
+//SESSION STORAGE - can be accessed in Application in the browser
+//The data is cleared when you close your web page or tab or the browser
+
+window.sessionStorage.setItem("Designation","Front-End Developer");
+window.sessionStorage.setItem("Salary","1000000");
+window.sessionStorage.setItem("Company","Infosys");
+
+window.sessionStorage.removeItem("Salary");
+
+console.log(window.sessionStorage.key(1));//(Index)
+console.log(window.sessionStorage.length);
+console.log(window.sessionStorage.getItem("Designation"));
+
+// window.sessionStorage.clear();//from here data will be cleared
+// console.log(window.sessionStorage.key(1));//(Index)
+// console.log(window.sessionStorage.length);
+
+
+
+
+
